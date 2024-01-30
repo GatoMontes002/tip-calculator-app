@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.calculadora {
+  display: flex;
+  min-width: 600px;
+  border-radius: 20px;
+  background-color: yellow;
+}
+.ingreso {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 15px;
+  padding: 15px;
+  width: 50%;
+  background-color: beige;
+  grid-template-areas:
+    "labelBill labelBill labelBill"
+    "costo costo costo"
+    "labelSelectTip labelSelectTip labelSelectTip"
+    "cinco diez quince"
+    "veinticinco cincuenta custom"
+    "labelNumberPeople labelNumberPeople labelNumberPeople"
+    "cantPersonas cantPersonas cantPersonas";
+}
+.salida {
+  width: 50%;
+}
+
+.labelBill {
+  grid-area: labelBill;
+}
+.labelSelectTip {
+  grid-area: labelSelectTip;
+}
+#costo {
+  grid-area: costo;
+}
+.cinco {
+  grid-area: cinco;
+}
+.diez {
+  grid-area: diez;
+}
+.quince {
+  grid-area: quince;
+}
+.gris {
+  background-color: gray;
+}
+
+.veinticinco {
+  grid-area: veinticinco;
+}
+.cincuenta {
+  grid-area: cincuenta;
+}
+#custom {
+  grid-area: custom;
+}
+.labelNumberPeople {
+  grid-area: labelNumberPeople;
+}
+#cantPersonas {
+  grid-area: cantPersonas;
+}
+.gris {
+  background-color: gray;
+}
+
+input {
+  text-align: right;
+}
+
+.selectedColor{
+  background-color: var(--strongCyan);
+}
+
+.primaryColor{
+  background-color: var(--veryDarkCyan);
+}
+
+.fuente{
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  color: var(--white);
+}
+.centrar{
+  text-align: center;
+  border-radius: 10px;
+}
