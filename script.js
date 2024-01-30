@@ -23,5 +23,16 @@ const pulsarDescuento = function(elem){
 }
 
 const pulsarCustomTip = function(elem){
+    console.log("Buscando");
     descuento = parseInt(elem.value, 10);
+    
+    elementos = document.getElementsByName("descuento");
+    console.log(elementos);
+    elementos.forEach(el => {
+        console.log(el);
+    });
+
+    elementos = document.getElementsByName("custom");
+    console.log(elementos);
+    console.log('============');
 }
