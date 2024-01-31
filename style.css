@@ -37,16 +37,16 @@ section {
 .ingreso {
   border-radius: 20px 0px 0px 20px;
   display: grid;
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(7, auto);
-  gap: 15px;
+  gap: 10px 0px;
   padding: 15px;
   width: 50%;
   min-width: 335px;
   background-color: var(--white);
   grid-template-areas:
     "labelBill . ."
-    "costo . ."
+    "costo costo costo"
     "labelSelectTip labelSelectTip labelSelectTip"
     "cinco diez quince"
     "veinticinco cincuenta custom"
@@ -77,31 +77,17 @@ section {
 #tag-costo {
   grid-area: costo;
 }
-.cinco {
-  grid-area: cinco;
-}
-.diez {
-  grid-area: diez;
-}
-.quince {
-  grid-area: quince;
-}
+
+
 .gris {
   background-color: gray;
 }
 
-.veinticinco {
-  grid-area: veinticinco;
-}
-.cincuenta {
-  grid-area: cincuenta;
-}
 
 .labelAmount{
   grid-area: labelAmount;
 }
 #custom {
-  grid-area: custom;
   text-align: center;
 }
 .labelNumberPeople {
@@ -124,6 +110,7 @@ input {
 
 .primaryColor{
   background-color: var(--veryDarkCyan);
+  max-width: 80px;
 }
 .fondoColor{
   background-color: var(--veryLightGrayishCyan);
@@ -163,6 +150,7 @@ p{
 }
 #costo{
   font-size: 100%;
+  
 }
 #tag-people {
   position: relative;
@@ -196,6 +184,7 @@ h1{
     margin-left: 1px;
     margin-right: 1px;
     justify-content: center;
+    margin-bottom: 10px;
   }
   .calculadora{
     flex-direction: column;

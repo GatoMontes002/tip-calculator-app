@@ -64,10 +64,9 @@ const pulsarDescuento = function(elem){
 const pulsarCustomTip = function(elem){
     //descuento = parseInt(elem.value, 10);
     descuento = elem
-    console.log("Buscando");
-    console.log(descuento);
     identificador = "p" + elem.toString();
     if (identificador==="p1000") identificador = "custom";
+    
     mielemento = document.getElementById(identificador);
     if (identificador==="custom") descuento = mielemento.value;
 
@@ -88,6 +87,9 @@ const pulsarCustomTip = function(elem){
             el.style.backgroundColor = "var(--veryDarkCyan)";
         };
     });
-    console.log('********');
+
+    if (identificador!=="custom")
+        document.getElementById("custom").value = "";
+
     saludar();
 }

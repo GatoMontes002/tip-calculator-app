@@ -37,53 +37,61 @@
     <main>
       <div style="display: flex;justify-content: center;"><h1>S P L I<br>T T E R</h1></div>
       <section>
+        
         <div class="calculadora">
-         
-          <div class="ingreso">
-            <div class="labelBill fuenteGris">Bill</div>
-            <span id="tag-costo">
-              <span>
-                <input
-                  class="fondoColor"
-                  onfocusout="pulsarCosto(this)"
-                  onfocus="pulsarCosto(this)"
-                  onchange="pulsarCosto(this)"
-                  onkeyup="pulsarCosto(this)"
-                  type="number"
-                  min="0"
-                  step="1"
-                  id="costo"
-                  name="costo"
-                  placeholder="0"
-                />
-                <span>
-                  <img id="dolar" src="images/icon-dollar.svg" alt="icon dollar">
+          <div class="ingreso" style="background-color: var(--white); align-items: center;padding: 0;display: flex;justify-content: center;" > 
+            <div style="background-color: var(--white);border-radius: 20px;height: 90%;width: 90%;padding: 0;display: flex;flex-direction: column;justify-content: flex-start;">
+              <div class="labelBill fuenteGris" style="padding-top: 25px;">Bill</div>
+              <span id="tag-costo">
+                <span >
+                  <input style="width: 100%;"
+                    class="fondoColor"
+                    onfocusout="pulsarCosto(this)"
+                    onfocus="pulsarCosto(this)"
+                    onchange="pulsarCosto(this)"
+                    onkeyup="pulsarCosto(this)"
+                    type="number"
+                    min="0"
+                    step="1"
+                    id="costo"
+                    name="costo"
+                    placeholder="0"
+                  />
+                  <span>
+                    <img id="dolar" src="images/icon-dollar.svg" alt="icon dollar" >
+                  </span>
                 </span>
+                <div class="labelSelectTip fuenteGris" style="width: 100%;">Select Tip %</div>
+                
+                <div style="display: grid;width: 100%;
+                grid-template-columns: repeat(3, 33%);
+                grid-template-rows: repeat(2, auto);
+                gap: 10px;padding-top: 5px;">
+                  <div onclick="pulsarCustomTip(5)" style="font-size: 0.9em;" class="cinco descuento  primaryColor centrar fuente" name="descuento" id="p5">5%</div>
+                  <div onclick="pulsarCustomTip(10)" style="font-size: 0.9em;" class="descuento  primaryColor centrar fuente" name="descuento" id="p10">10%</div>
+                  <div onclick="pulsarCustomTip(15)" style="font-size: 0.9em;" class="descuento  primaryColor centrar fuente" name="descuento" id="p15">15%</div>
+                  <div onclick="pulsarCustomTip(25)" style="font-size: 0.9em;" class="descuento  primaryColor centrar fuente" name="descuento" id="p25">25%</div>
+                  <div onclick="pulsarCustomTip(50)" style="font-size: 0.9em;" class="descuento primaryColor centrar fuente" name="descuento" id="p50">50%</div>
+                  <input
+                    type="number"
+                    style="font-size: 0.9em;" 
+                    
+                    onkeyup= "pulsarCustomTip(1000)"
+                    onfocusout= "pulsarCustomTip(1000)"
+                    onfocus= "pulsarCustomTip(1000)"
+                    onchange= "pulsarCustomTip(1000)"
+                    
+                    class="descuento primaryColor centrar fuente"
+                    min="0"
+                    step="1"
+                    id="custom"
+                    name="custom"
+                    placeholder="Custom"
+                  />
+                </div>
               </span>
-            </span>
-            <div class="labelSelectTip fuenteGris">Select Tip</div>
-            <div onclick="pulsarCustomTip(5)" class="descuento cinco primaryColor centrar fuente" name="descuento" id="p5">5%</div>
-            <div onclick="pulsarCustomTip(10)" class="descuento diez primaryColor centrar fuente" name="descuento" id="p10">10%</div>
-            <div onclick="pulsarCustomTip(15)" class="descuento quince primaryColor centrar fuente" name="descuento" id="p15">15%</div>
-            <div onclick="pulsarCustomTip(25)" class="descuento veinticinco primaryColor centrar fuente" name="descuento" id="p25">25%</div>
-            <div onclick="pulsarCustomTip(50)" class="descuento cincuenta primaryColor centrar fuente" name="descuento" id="p50">50%</div>
-            <input
-              type="number"
-              
-              
-              onkeyup= "pulsarCustomTip(1000)"
-              onfocusout= "pulsarCustomTip(1000)"
-              onfocus= "pulsarCustomTip(1000)"
-              onchange= "pulsarCustomTip(1000)"
-              
-              class="descuento primaryColor centrar fuente"
-              min="0"
-              step="1"
-              id="custom"
-              name="custom"
-              placeholder="Custom"
-            />
             
+            <br>
             <div class="labelNumberPeople fuenteGris">Number of People</div>
             <span id="tag-people">
               <input
@@ -101,9 +109,11 @@
                 <img id="imgpeople" src="images/icon-person.svg" alt="icon dollar">
               </span>
             </span>
+            </div>
           </div>
-        
-          <div class="salida">           
+          <div class="salida" style="background-color: var(--white); align-items: center;padding: 0;display: flex;justify-content: center;" > 
+            <div style="background-color: var(--veryDarkCyan);border: solid;border-radius: 20px;height: 90%;width: 90%;padding: 0;display: flex;justify-content: center;align-items: center;">
+              <div style="width: 90%;height: 90%;margin-top: 70px;min-height: 300px;">
                 <div style="display: flex;width: 100%;align-items: center;">
                   <div style="display: flex;flex-direction:column;width: 50%;">
                     <p><div class="fuente font60">Tip Amount</div></p>
@@ -125,6 +135,8 @@
                 </div>
                 <br>
                 <div onclick="reset()" id="botonreset" style="display: flex;justify-content: center;width: 100%;background-color: rgba(239, 239, 239, 0.3);border-radius: 12px;cursor:pointer;font-size: 1rem;padding-top: 8px;padding-bottom: 8px;color: rgb(40, 40, 40);">RESET</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
