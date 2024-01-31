@@ -38,6 +38,7 @@
       <h1>Splitter</h1>
       <section>
         <div class="calculadora">
+         
           <div class="ingreso">
             <div class="labelBill fuenteGris">Bill</div>
             <span id="tag-costo">
@@ -61,20 +62,21 @@
               </span>
             </span>
             <div class="labelSelectTip fuenteGris">Select Tip</div>
-            <div onclick="pulsarCustomTip(5)" class="descuento cinco primaryColor centrar fuente" name="descuento">
-              5%
-            </div>
-            <div onclick="pulsarCustomTip(10)" class="descuento diez primaryColor centrar fuente" name="descuento">10%</div>
-            <div onclick="pulsarCustomTipo(15)" class="descuento quince primaryColor centrar fuente" name="descuento">15%</div>
-            <div onclick="pulsarCustomTip(25)" class="descuento veinticinco primaryColor centrar fuente" name="descuento">25%</div>
-            <div onclick="pulsarCustomTip(50)" class="descuento cincuenta primaryColor centrar fuente" name="descuento">50%</div>
+            <div onclick="pulsarCustomTip(5)" class="descuento cinco primaryColor centrar fuente" name="descuento" id="p5">5%</div>
+            <div onclick="pulsarCustomTip(10)" class="descuento diez primaryColor centrar fuente" name="descuento" id="p10">10%</div>
+            <div onclick="pulsarCustomTip(15)" class="descuento quince primaryColor centrar fuente" name="descuento" id="p15">15%</div>
+            <div onclick="pulsarCustomTip(25)" class="descuento veinticinco primaryColor centrar fuente" name="descuento" id="p25">25%</div>
+            <div onclick="pulsarCustomTip(50)" class="descuento cincuenta primaryColor centrar fuente" name="descuento" id="p50">50%</div>
             <input
               type="number"
-              onfocusout="pulsarCustomTip(this)"
-              onfocus="pulsarCustomTip(this)"
-              onchange="pulsarCustomTip(this)"
-              onkeyup="pulsarCustomTip(this)"
-              class="descuento"
+              
+              
+              onkeyup= "pulsarCustomTip(1000)"
+              onfocusout= "pulsarCustomTip(1000)"
+              onfocus= "pulsarCustomTip(1000)"
+              onchange= "pulsarCustomTip(1000)"
+              
+              class="descuento primaryColor centrar fuente"
               min="0"
               step="1"
               id="custom"
@@ -100,8 +102,13 @@
               </span>
             </span>
           </div>
+        
           <div class="salida">
-            Amount / person Total / person Reset
+            <p><span class="fuente font60">Tip Amount</span></p>
+            <p><span class="fuente font80">/ person</span><span style="display: flex;justify-content: right;align-items: baseline;"><span class="fuente">0.00</span></span></p>
+
+            
+             <!-- Total / person Reset -->
 
           </div>
         </div>

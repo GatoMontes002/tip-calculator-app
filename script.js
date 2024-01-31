@@ -11,11 +11,12 @@ const saludar  = function(){
 
 const pulsarPersonas  = function(elem){
     cantidadDePersonas = parseInt(elem.value, 10);
+    saludar();
 }
 
 const pulsarCosto = function(elem){
     costoComida = parseInt(elem.value, 10);
-    console.log(cantidadDePersonas*costoComida);
+    saludar();
 }
 
 const pulsarDescuento = function(elem){
@@ -23,16 +24,32 @@ const pulsarDescuento = function(elem){
 }
 
 const pulsarCustomTip = function(elem){
+    //descuento = parseInt(elem.value, 10);
+    descuento = elem
     console.log("Buscando");
-    descuento = parseInt(elem.value, 10);
+    console.log(descuento);
+    identificador = "p" + elem.toString();
+    if (identificador==="p1000") identificador = "custom";
+    mielemento = document.getElementById(identificador);
+    if (identificador==="custom") descuento = mielemento.value;
+
+    
     
     elementos = document.getElementsByName("descuento");
-    console.log(elementos);
-    elementos.forEach(el => {
-        console.log(el);
+    miarray = [ document.getElementById("custom") ];
+    
+    elementos.forEach(el => miarray.push(el));
+        
+    miarray.forEach(el => {
+        if (el===mielemento){ 
+            el.style.color = "var(--veryDarkCyan)";
+            el.style.backgroundColor = "var(--strongCyan)";
+        }
+        else{ 
+            el.style.color = "var(--white)";
+            el.style.backgroundColor = "var(--veryDarkCyan)";
+        };
     });
-
-    elementos = document.getElementsByName("custom");
-    console.log(elementos);
-    console.log('============');
+    console.log('********');
+    saludar();
 }
