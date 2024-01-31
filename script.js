@@ -3,19 +3,16 @@ let costoComida = 0
 let descuento = 0
 
 const saludar  = function(){
-    console.log(cantidadDePersonas);
-    console.log(costoComida);
-    console.log(descuento);
-    console.log("-------------------");
+    if (cantidadDePersonas===0) return;
 
     valorPropina = costoComida * descuento / 100 / cantidadDePersonas;
     console.log(valorPropina)
     elem = document.getElementById("propina");
-    elem.innerText = valorPropina.toFixed(2);
+    elem.innerText = "$" + valorPropina.toFixed(2);
 
     valorComida = valorPropina + costoComida / cantidadDePersonas;
     elem = document.getElementById("costoPorpersona");
-    elem.innerText = valorComida.toFixed(2);
+    elem.innerText = "$" + valorComida.toFixed(2);
 
     
 }
@@ -24,7 +21,30 @@ const reset  = function(){
     cantidadDePersonas = 0;
     costoComida = 0;
     descuento = 0;
-    saludar();
+    elem = document.getElementById("propina");
+    elem.innerText = "$0.0" 
+    elem = document.getElementById("costoPorpersona");
+    elem.innerText = "$0.0" 
+
+    elem = document.getElementById("cantPersonas");
+    elem.value = "0" 
+
+    elem = document.getElementById("costo");
+    elem.value = "0" 
+
+    elem = document.getElementById("custom");
+    elem.value = "" 
+
+    elementos = document.getElementsByName("descuento");
+    miarray = [ document.getElementById("custom") ];
+    
+    elementos.forEach(el => miarray.push(el));
+        
+    miarray.forEach(el => {
+        el.style.color = "var(--white)";
+        el.style.backgroundColor = "var(--veryDarkCyan)";
+    });
+    
 }
 
 const pulsarPersonas  = function(elem){

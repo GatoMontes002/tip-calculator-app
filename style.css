@@ -26,6 +26,7 @@ section {
 }
 
 .calculadora {
+  padding-top: 40px;
   display: flex;
   min-width: 670px;
 }
@@ -151,8 +152,8 @@ p{
 }
 #dolar{
   position: relative;
-  left: -19rem;
-  top: 0.7 rem;
+  left: 0.5em;
+  top: -1.5em;
 }
 #custom{
   font-size: 100%;
@@ -168,36 +169,45 @@ p{
 }
 #imgpeople{
   position: relative;
-  left: -19rem;
-  top: 0.7 rem;
+  left: 0.5em;
+  top: -1.5em;
 }
 
 .descuento:hover {
   background-color: var(--strongCyan);
   color: var(--veryDarkCyan);
+  cursor: pointer;
 }
 
+#botonreset:hover {
+  background-color: var(--grayishCyan) !important;
+  cursor: pointer;
+}
+h1{
+  font-size:x-large;
+  color: var(--veryDarkCyan);
+}
 @media only screen and (max-width: 800px) {
   section{
     display: flex;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
     justify-content: center;
   }
   .calculadora{
     flex-direction: column;
-    width: 400px;
-    min-width: 400px;
+    width: 350px;
+    min-width: 350px;
   }
   .ingreso{
     border-radius: 20px 20px 0px 0px;
-    width: 400px;
-    min-width: 400px;
+    width: 350px;
+    min-width: 350px;
   }
   .salida{
     border-radius: 0px 0px 20px 20px;
-    width: 400px;
-    min-width: 400px;
+    width: 350px;
+    min-width: 350px;
   }
 }
 

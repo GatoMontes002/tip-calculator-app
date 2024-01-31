@@ -35,7 +35,7 @@
   </head>
   <body>
     <main>
-      <h1>Splitter</h1>
+      <div style="display: flex;justify-content: center;"><h1>S P L I<br>T T E R</h1></div>
       <section>
         <div class="calculadora">
          
@@ -95,7 +95,7 @@
                 step="1"
                 id="cantPersonas"
                 name="cantPersonas"
-                placeholder="1"
+                placeholder="0"
               />
               <span>
                 <img id="imgpeople" src="images/icon-person.svg" alt="icon dollar">
@@ -104,27 +104,27 @@
           </div>
         
           <div class="salida">           
-                <div style="display: flex;width: 100%;background-color:green;">
-                  <div style="display: flex;flex-direction:column;border: dashed;width: 50%;">
+                <div style="display: flex;width: 100%;align-items: center;">
+                  <div style="display: flex;flex-direction:column;width: 50%;">
                     <p><div class="fuente font60">Tip Amount</div></p>
                     <p><div class="fuente font80" style="justify-content: flex-start;">/ person</div></p>
                   </div>
-                  <div style="display: flex;justify-content: flex-end;border: solid;width: 50%;">
-                    <span id="propina" class="fuente" style="justify-content: flex-end;">0.00</span>
+                  <div style="display: flex;justify-content: flex-end;width: 50%;">
+                    <span id="propina" class="fuente" style="justify-content: flex-end;color:var(--strongCyan);font-size:1.4em;">$0.00</span>
                   </div>
                 </div>
                 <br>
-                <div style="display: flex;width: 100%;background-color:green;">
-                  <div style="display: flex;flex-direction:column;border: dashed;width: 50%;">
+                <div style="display: flex;width: 100%;align-items: center;">
+                  <div style="display: flex;flex-direction:column;width: 50%;">
                     <p><div class="fuente font60">Total</div></p>
                     <p><div class="fuente font80" style="justify-content: flex-start;">/ person</div></p>
                   </div>
-                  <div style="display: flex;justify-content: flex-end;border: solid;width: 50%;">
-                    <span id="costoPorpersona" class="fuente" style="justify-content: flex-end;">0.00</span>
+                  <div style="display: flex;justify-content: flex-end;width: 50%;">
+                    <span id="costoPorpersona" class="fuente" style="justify-content: flex-end;color:var(--strongCyan);font-size:1.4em;">$0.00</span>
                   </div>
                 </div>
                 <br>
-                <div onclick="reset()" style="display: flex;justify-content: center;width: 100%;border: solid;background-color: var(--strongCyan);color:var(--veryDarkCyan);border-radius: 12px;">Reset</div>
+                <div onclick="reset()" id="botonreset" style="display: flex;justify-content: center;width: 100%;background-color: rgba(239, 239, 239, 0.3);border-radius: 12px;cursor:pointer;font-size: 1rem;padding-top: 8px;padding-bottom: 8px;color: rgb(40, 40, 40);">RESET</div>
 
             
              <!-- Total / person Reset -->
