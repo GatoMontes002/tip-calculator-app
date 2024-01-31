@@ -11,6 +11,7 @@
   --lightGrayishCyan: hsl(185, 41%, 84%);
   --veryLightGrayishCyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --anchocalculadora: 350px;
 }
 body{
   background-color: var(--lightGrayishCyan);
@@ -27,8 +28,10 @@ section {
 
 .calculadora {
   padding-top: 40px;
+  padding-bottom: 30px;
   display: flex;
   min-width: 670px;
+
 }
 
 .ingreso {
@@ -196,18 +199,18 @@ h1{
   }
   .calculadora{
     flex-direction: column;
-    width: 350px;
-    min-width: 350px;
+    width: var(--anchocalculadora);
+    min-width: var(--anchocalculadora);
   }
   .ingreso{
     border-radius: 20px 20px 0px 0px;
-    width: 350px;
-    min-width: 350px;
+    width: var(--anchocalculadora);
+    min-width: var(--anchocalculadora);
   }
   .salida{
     border-radius: 0px 0px 20px 20px;
-    width: 350px;
-    min-width: 350px;
+    width: var(--anchocalculadora);
+    min-width: var(--anchocalculadora);
   }
 }
 
