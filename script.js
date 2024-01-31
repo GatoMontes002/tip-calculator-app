@@ -1,4 +1,4 @@
-let cantidadDePersonas = 1
+let cantidadDePersonas = 0
 let costoComida = 0
 let descuento = 0
 
@@ -7,6 +7,24 @@ const saludar  = function(){
     console.log(costoComida);
     console.log(descuento);
     console.log("-------------------");
+
+    valorPropina = costoComida * descuento / 100 / cantidadDePersonas;
+    console.log(valorPropina)
+    elem = document.getElementById("propina");
+    elem.innerText = valorPropina.toFixed(2);
+
+    valorComida = valorPropina + costoComida / cantidadDePersonas;
+    elem = document.getElementById("costoPorpersona");
+    elem.innerText = valorComida.toFixed(2);
+
+    
+}
+
+const reset  = function(){
+    cantidadDePersonas = 0;
+    costoComida = 0;
+    descuento = 0;
+    saludar();
 }
 
 const pulsarPersonas  = function(elem){

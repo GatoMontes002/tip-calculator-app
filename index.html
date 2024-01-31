@@ -103,19 +103,28 @@
             </span>
           </div>
         
-          <div class="salida">
-            
-            <p>
+          <div class="salida">           
                 <div style="display: flex;width: 100%;background-color:green;">
                   <div style="display: flex;flex-direction:column;border: dashed;width: 50%;">
                     <p><div class="fuente font60">Tip Amount</div></p>
                     <p><div class="fuente font80" style="justify-content: flex-start;">/ person</div></p>
                   </div>
                   <div style="display: flex;justify-content: flex-end;border: solid;width: 50%;">
-                    <span class="fuente" style="justify-content: flex-end;">0.00</span>
+                    <span id="propina" class="fuente" style="justify-content: flex-end;">0.00</span>
                   </div>
                 </div>
-            </p>
+                <br>
+                <div style="display: flex;width: 100%;background-color:green;">
+                  <div style="display: flex;flex-direction:column;border: dashed;width: 50%;">
+                    <p><div class="fuente font60">Total</div></p>
+                    <p><div class="fuente font80" style="justify-content: flex-start;">/ person</div></p>
+                  </div>
+                  <div style="display: flex;justify-content: flex-end;border: solid;width: 50%;">
+                    <span id="costoPorpersona" class="fuente" style="justify-content: flex-end;">0.00</span>
+                  </div>
+                </div>
+                <br>
+                <div onclick="reset()" style="display: flex;justify-content: center;width: 100%;border: solid;background-color: var(--strongCyan);color:var(--veryDarkCyan);border-radius: 12px;">Reset</div>
 
             
              <!-- Total / person Reset -->
